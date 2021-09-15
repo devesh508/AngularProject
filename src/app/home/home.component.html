@@ -1,0 +1,56 @@
+<br/>
+<br/>
+{{ name |uppercase}} <br/>
+{{ name | lowercase}} <br/>
+{{ name| titlecase}} <br/>
+{{ name| slice:3}} <br/>
+{{ name| slice:3:5}} <br/>
+
+{{ person | json}} <br/>
+{{ person }}
+
+{{ val | number: '1.2-3'}}<br/>
+{{ val | number: '3.4-5'}}<br/>
+{{ val | number: '3.1-2'}}<br/>
+{{ val | percent}}<br/>
+{{ val | currency}}<br/>
+{{ val | number: 'GBP'}}<br/>
+{{ val | number: 'INR'}}<br/>
+
+{{ hdate | date: 'shortDate'}} <br/>
+{{ hdate | date: 'shortTime'}} <br/>
+{{ hdate | date: 'mediumDate'}} <br/>
+{{ hdate | date: 'mediumTime'}} <br/>
+{{ hdate | date: 'longTime'}} <br/>
+{{ hdate | date: 'longDate'}} <br/>
+
+{{ name | arrangeorder : 'Mr' : 'the Great'}} <br/>
+
+
+Enter the Search text : <input [(ngModel)]='searchText' placeholder='search Text goes here'>
+<ul>
+<li *ngFor=' let c of Character | filter: searchText'>
+{{ c }}
+</li>
+</ul>
+
+<!-- public characters = ['Krisha', 'Govinda','Achutha', 'Madhava', 'Janardhana', 'vasudev','Anantha']; -->
+
+{{ Character | sortpipe: 'ascending'}} <br/>
+{{ Character | sortpipe: 'descending'}} <br/>
+
+
+Title:{{ product.title}}
+Price:{{ product.price}}
+
+<button [style.height.px]='btnHeight' [style.width.px]='btnWidth'>Add Product</button>
+
+<button (click)="addProduct()">Add Product</button>
+Hi  {{ greetMessage}}
+<button (click)='valueChanged()'>click here</button>
+
+Enter the name : <input type="text" [(ngModel)] = 'name' />
+<h3>{{ name }}</h3>
+<h1>Welcome To Home</h1>
+
+<h1 appHlight >Hello</h1>
